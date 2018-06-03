@@ -11,7 +11,6 @@
 
   <body>
     <%= render "layouts/navbar" %>
-
     <!-- content -->
     <div class="container">
       <div class="row">
@@ -20,6 +19,7 @@
         </div><!-- /.col-md-3 -->
 
         <div class="col-md-9">
+          <%= render "layouts/messages" if !flash.empty? %>
           <%= yield %>
         </div>
       </div>
