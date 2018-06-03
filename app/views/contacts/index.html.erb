@@ -1,6 +1,11 @@
+<% if @contacts.blank? %>
+  <div class="alert alert-warning">
+    <strong>No contacts found!</strong>
+  </div>
+<% end %>
 <div class="panel panel-default">
   <table class="table">
-    <% render @contact %>
+    <% render @contacts %>
   </table>
 </div>
 
