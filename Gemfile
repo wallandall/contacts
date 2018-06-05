@@ -60,3 +60,4 @@ gem 'kaminari', '~> 1.1', '>= 1.1.1'
 #used to uplaod images
 gem 'paperclip', '~> 6.0'
 gem 'jasny-bootstrap-rails', '~> 3.1', '>= 3.1.3'
+gem 'mysql2', '~> 0.5.1'
