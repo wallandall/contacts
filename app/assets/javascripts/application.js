@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
+//= require jasny-bootstrap.min
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
