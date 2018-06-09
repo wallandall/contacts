@@ -1,4 +1,4 @@
-<%= form_for(@contact, url: @contact.new_record? ? create_contact_path : update_contact_path(@contact), html: { multipart: true }) do |f| %>
+<%= form_for(@contact, html: { multipart: true }) do |f| %>
 
     <div class="panel-body">
 
@@ -60,7 +60,9 @@
             <div class="form-group">
               <%= f.label :group_id, class: "control-label col-md-3" %>
               <div class="col-md-5">
-                <%= f.collection_select :group_id, Group.all, :id, :name, { prompt: "Select Group" }, class: "form-control" %>
+                <% attr = { prompt: "Select Group" } %>
+                <% attr[:selected] = session[:selected_group_id].to_i if session[:selected_group_id] %>
+                <%= f.collection_select :group_id, Group.all, :id, :name, attr, class: "form-control" %>
               </div>
               <div class="col-md-3">
                 <a href="#" id="add-group-btn" class="btn btn-default btn-block">Add Group</a>
@@ -82,7 +84,7 @@
           <div class="col-md-4">
             <div class="fileinput fileinput-new" data-provides="fileinput">
               <div class="fileinput-new thumbnail" style="width: 150px; height: 150px;">
-               <%= image_tag @contact.avatar.url(:medium) %>
+                <%= image_tag @contact.avatar.url(:medium) %>
               </div>
               <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
               <div class="text-center">
