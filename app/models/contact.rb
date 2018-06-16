@@ -15,7 +15,7 @@ class Contact < ApplicationRecord
   end
 
   scope :search, -> (term) do
-      where('LOWER(name) LIKE :term or LOWER(company) LIKE :term or LOWER(email) LIKE :term', term: "%#{term.downcase}%") if term.present?
+      where('LOWER(name) ILIKE :term or LOWER(company) ILIKE :term or LOWER(email) ILIKE :term', term: "%#{term.downcase}%") if term.present?
   end
 
   scope :by_group, -> (group_id) { where(group_id: group_id) if group_id.present? }
