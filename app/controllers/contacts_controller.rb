@@ -6,6 +6,10 @@ class ContactsController < ApplicationController
      @contacts = Contact.by_group(params[:group_id]).search(params[:term]).order(created_at: :desc).page(params[:page])
   end
 
+  def autocomplete
+    @contacts = Contact.search(params[:term]).order(created_at: :desc).page(params[:page]) 
+  end
+
   def new
       @contact = Contact.new
   end
