@@ -43,7 +43,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (9.0.0)
-    autoprefixer-rails (8.6.0)
+    autoprefixer-rails (8.6.2)
       execjs
     bindex (0.5.0)
     bootsnap (1.3.0)
@@ -65,7 +65,9 @@ GEM
     crass (1.0.4)
     erubi (1.7.1)
     execjs (2.7.0)
-    ffi (1.9.23)
+    faker (1.8.7)
+      i18n (>= 0.7)
+    ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (1.0.1)
@@ -121,6 +123,7 @@ GEM
       mime-types
       mimemagic (~> 0.3.0)
       terrapin (~> 0.6.0)
+    pg (1.0.0)
     puma (3.11.4)
     rack (2.0.5)
     rack-test (1.0.0)
@@ -177,7 +180,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.3.13)
     terrapin (0.6.0)
       climate_control (>= 0.0.3, < 1.0)
     thor (0.20.0)
@@ -207,25 +209,23 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3, >= 3.3.7)
   byebug
   coffee-rails (~> 4.2)
+  faker (~> 1.7, >= 1.7.3)
   jasny-bootstrap-rails (~> 3.1, >= 3.1.3)
   jbuilder (~> 2.5)
   jquery-rails (~> 4.3, >= 4.3.3)
   kaminari (~> 1.1, >= 1.1.1)
   listen (>= 3.0.5, < 3.2)
   paperclip (~> 6.0)
+  pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 5.2.0)
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
-
-RUBY VERSION
-   ruby 2.4.1p111
 
 BUNDLED WITH
    1.16.2

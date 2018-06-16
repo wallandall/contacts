@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2018_06_04_194236) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "contacts", force: :cascade do |t|
     t.string "name"
     t.string "company"
@@ -19,7 +22,7 @@ ActiveRecord::Schema.define(version: 2018_06_04_194236) do
     t.string "website"
     t.string "phone"
     t.string "address"
-    t.integer "group_id"
+    t.bigint "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "avatar_file_name"
@@ -33,4 +36,5 @@ ActiveRecord::Schema.define(version: 2018_06_04_194236) do
     t.string "name"
   end
 
+  add_foreign_key "contacts", "groups"
 end
