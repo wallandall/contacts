@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'dashboard/index'
   get 'home/index'
-  devise_for :users
+  devise_for :users, path: 'auth', path_names: {sign_in: 'login', sign_out: 'logout', sign_up: 'register'}
   # get 'contacts/index', as: 'contacts'
   # get 'contacts/new', as: 'new_contact'
   # post 'contacts/create', as: 'create_contact'

@@ -1,4 +1,5 @@
 class ContactsController < ApplicationController
+  before_action :authenticate_user!
   before_action :find_contact, only: [:edit, :update, :destroy]
 
   def index
@@ -7,7 +8,7 @@ class ContactsController < ApplicationController
   end
 
   def autocomplete
-    @contacts = Contact.search(params[:term]).order(created_at: :desc).page(params[:page]) 
+    @contacts = Contact.search(params[:term]).order(created_at: :desc).page(params[:page])
   end
 
   def new
