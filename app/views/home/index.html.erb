@@ -1,2 +1,10 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="col.md-10 col-md-offset-1">
+  <div class="jumbotron text-centre">
+    <h1>Free Online Contact Manager</h1>
+    <p class="lead">Organise your contacts freely and easily</p>
+    <p>
+      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-large" %>
+      <%= link_to "Sign In", new_user_session_path, class: "btn btn-default btn-large" %>
+    </p>
+  </div>
+</div>
