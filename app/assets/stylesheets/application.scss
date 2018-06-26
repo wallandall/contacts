@@ -14,6 +14,7 @@
  *= require jasny-bootstrap.min
  *= require jquery-ui/autocomplete
  *= require jquery-ui/menu
+ *= require toastr
  *= require_self
  */
  @import "bootstrap-sprockets";
@@ -96,5 +97,5 @@
  }
 
 .jumbotron{
-  background: #fff; 
+  background: #fff;
 }
