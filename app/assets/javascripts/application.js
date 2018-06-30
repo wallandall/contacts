@@ -34,3 +34,11 @@ $( document ).on('turbolinks:load', function() {
         }
     });
 });
+
+$(document).on('click', '.pagination a[data-remote=true], a.list-group-item', function() {
+  history.pushState({}, '', $(this).attr('href'));
+});
+
+$(window).on('popstate', function() {
+  $.get(document.location.href);
+});
